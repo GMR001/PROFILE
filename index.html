@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Web Signature</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+<!-- Animate.css -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Poppins',sans-serif;
+    color:#fff;
+}
+
+/* CARD */
+.signature-card{
+    width:390px;
+    padding:32px;
+    border-radius:22px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(18px);
+    box-shadow:0 25px 60px rgba(0,0,0,.45);
+    animation:fadeInUp 1s;
+}
+
+/* PROFILE */
+.profile{
+    text-align:center;
+}
+
+.profile img{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    border:4px solid #00e6ff;
+    box-shadow:0 0 25px rgba(0,230,255,.6);
+    margin-bottom:15px;
+}
+
+.profile h2{
+    margin:8px 0 2px;
+    font-size:22px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.profile h4{
+    margin:0;
+    font-size:14px;
+    font-weight:400;
+    color:#00e6ff;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+}
+
+/* DIVIDER */
+.divider{
+    height:1px;
+    background:linear-gradient(to right,transparent,#00e6ff,transparent);
+    margin:22px 0;
+}
+
+/* INFO */
+.info div{
+    display:flex;
+    align-items:center;
+    margin:14px 0;
+    font-size:14.5px;
+}
+
+.info i{
+    width:30px;
+    font-size:16px;
+    color:#00e6ff;
+}
+
+.info a{
+    color:#ffffff;
+    text-decoration:none;
+    font-weight:400;
+    transition:.3s;
+}
+
+.info a:hover{
+    color:#00e6ff;
+    letter-spacing:.3px;
+}
+
+/* SOCIAL */
+.social{
+    text-align:center;
+    margin-top:22px;
+}
+
+.social a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:38px;
+    height:38px;
+    margin:0 6px;
+    border-radius:50%;
+    background:rgba(255,255,255,.12);
+    color:#fff;
+    font-size:17px;
+    transition:.35s;
+}
+
+.social a:hover{
+    background:#00e6ff;
+    color:#000;
+    transform:translateY(-4px);
+}
+
+/* BUTTON */
+.copy-btn{
+    margin-top:26px;
+    width:100%;
+    padding:13px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(135deg,#00e6ff,#00bcd4);
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.copy-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(0,230,255,.45);
+}
+
+/* FOOTER */
+.footer-text{
+    margin-top:12px;
+    text-align:center;
+    font-size:12px;
+    opacity:.65;
+}
+</style>
+</head>
+
+<body>
+
+<div class="signature-card">
+    <div class="profile">
+        <img src="01.png" alt="Profile">
+        <h2>MUSTAQUE KHAN</h2>
+        <h4>Civil Engineer</h4>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="info" id="signatureText">
+        <div>
+            <i class="fas fa-phone"></i>
+            <a href="tel:+917419922222">+91 74199 22222</a>
+        </div>
+
+        <div>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:mustaquekhan406@gmail.com">mustaquekhan406@gmail.com</a>
+        </div>
+
+        <div>
+            <i class="fas fa-globe"></i>
+            <a href="https://gmr001.github.io/MUSTAQUE-KHAN/" target="_blank">www.MUSTAQUE KHAN.com</a>
+        </div>
+
+        <div>
+            <i class="fas fa-location-dot"></i>
+            <a href="https://maps.google.com/?q=India" target="_blank">India</a>
+        </div>
+    </div>
+
+    <div class="social">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+
+    <button class="copy-btn" onclick="copySignature()">
+        MUSTAQUE KHAN
+    </button>
+
+    <div class="footer-text">
+        © 2026 Professional Web Profile
+    </div>
+</div>
+
+<script>
+function copySignature(){
+    const text=document.getElementById("signatureText").innerText;
+    navigator.clipboard.writeText(text);
+    alert("Signature copied successfully!");
+}
+</script>
+
+</body>
+</html>
